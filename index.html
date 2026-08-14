@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dịch vụ vệ sinh công nghiệp Hà Nội | CleanHanoi (Web Dọn Nè)</title>
-  <meta name="description" content="CleanHanoi chuyên cung cấp dịch vụ vệ sinh công nghiệp Hà Nội uy tín, khảo sát báo giá nhanh 24/7.">
+  <title>Dọn Nè - Dịch Vụ Vệ Sinh Công Nghiệp & Dọn Dẹp Chuyên Nghiệp Hà Nội</title>
+  <meta name="description" content="Dọn Nè chuyên cung cấp dịch vụ vệ sinh công nghiệp, dọn nhà, văn phòng, nhà xưởng, giặt thảm sofa uy tín số 1 Hà Nội. Khảo sát 24/7.">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -21,11 +21,12 @@
         extend: {
           colors: {
             brand: {
-              blue: '#0284c7',
-              darkBlue: '#0369a1',
+              green: '#16a34a',       // Xanh lá Dọn Nè
+              darkGreen: '#15803d',
               navy: '#0f172a',
+              gold: '#eab308',        // Vàng chổi quét
+              darkGold: '#ca8a04',
               orange: '#f97316',
-              darkOrange: '#ea580c',
               zalo: '#0068ff'
             }
           },
@@ -55,27 +56,27 @@
       transform: scale(1.05);
     }
     .modal-backdrop {
-      background-color: rgba(15, 23, 42, 0.8);
-      backdrop-filter: blur(4px);
+      background-color: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(5px);
     }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-blue selection:text-white">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-green selection:text-white">
 
   <!-- ================= TOPBAR ================= -->
   <div class="bg-slate-900 text-slate-300 text-xs sm:text-sm py-2.5 px-4 border-b border-slate-800">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
       <div class="flex items-center gap-4">
-        <span class="flex items-center gap-1.5"><i class="fa-solid fa-clock text-brand-orange"></i> Làm việc 24/7 (Kể cả Lễ, Tết)</span>
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-sparkles text-brand-gold"></i> Dọn Nè - Dọn Sạch Mọi Ngóc Ngách</span>
         <span class="hidden md:inline text-slate-600">|</span>
-        <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-sky-400"></i> Khảo sát – Báo giá nhanh tại Hà Nội</span>
+        <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid fa-clock text-brand-green"></i> Phục vụ 24/7 (Kể cả Lễ, Tết)</span>
       </div>
       <div class="flex items-center gap-4">
-        <a href="tel:0355616583" class="text-white hover:text-brand-orange font-bold transition flex items-center gap-1.5 dynamic-hotline-link">
-          <i class="fa-solid fa-phone-volume text-brand-orange shake-anim"></i> Hotline/Zalo: <span class="dynamic-hotline-text">0355 616 583</span>
+        <a href="tel:0355616583" class="text-white hover:text-brand-gold font-bold transition flex items-center gap-1.5 dynamic-hotline-link">
+          <i class="fa-solid fa-phone-volume text-brand-gold shake-anim"></i> Hotline/Zalo: <span class="dynamic-hotline-text">0355 616 583</span>
         </a>
-        <button onclick="openAdminLogin()" class="text-xs bg-slate-800 hover:bg-slate-700 text-sky-300 px-2.5 py-1 rounded-md border border-slate-700 transition flex items-center gap-1">
-          <i class="fa-solid fa-lock text-[10px]"></i> Admin
+        <button onclick="openAdminLogin()" class="text-xs bg-brand-darkGreen hover:bg-brand-green text-white font-bold px-3 py-1 rounded-md transition flex items-center gap-1.5 shadow">
+          <i class="fa-solid fa-chart-line text-[11px] text-brand-gold"></i> Quản Trị Admin
         </button>
       </div>
     </div>
@@ -86,33 +87,43 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         
-        <!-- Logo -->
-        <a href="#" class="flex items-center gap-2.5 group">
-          <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-blue to-cyan-400 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition">
-            <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
+        <!-- Logo Dọn Nè (Ngôi nhà + Chổi vàng) -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-brand-green shadow-inner group-hover:scale-105 transition">
+            <svg class="w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Mái nhà & Ngôi nhà -->
+              <path d="M50 18L20 42H30V75H70V42H80L50 18Z" fill="#dcfce7" stroke="#15803d" stroke-width="6" stroke-linejoin="round"/>
+              <rect x="42" y="48" width="16" height="27" fill="#15803d" rx="2"/>
+              <!-- Tia sáng lấp lánh -->
+              <path d="M78 16L82 24L90 28L82 32L78 40L74 32L66 28L74 24L78 16Z" fill="#eab308"/>
+              <!-- Cây chổi quét -->
+              <path d="M30 82C40 76 60 76 75 78L85 86C65 92 45 92 25 88L30 82Z" fill="#eab308" stroke="#ca8a04" stroke-width="2"/>
+              <path d="M70 80L85 70" stroke="#15803d" stroke-width="5" stroke-linecap="round"/>
+            </svg>
           </div>
           <div>
-            <span class="text-2xl font-black tracking-tight text-slate-900 block leading-tight">Clean<span class="text-brand-blue">Hanoi</span></span>
-            <span class="text-[11px] text-slate-500 font-medium tracking-wide uppercase">Vệ Sinh Công Nghiệp</span>
+            <span class="text-2xl font-black tracking-tight text-brand-darkGreen block leading-tight">DỌN <span class="text-brand-green">NÈ</span></span>
+            <span class="text-[11px] text-slate-500 font-bold tracking-wider uppercase">Vệ Sinh Chuyên Nghiệp</span>
           </div>
         </a>
 
         <!-- Desktop Menu -->
         <nav class="hidden lg:flex items-center gap-1 xl:gap-2 font-medium text-slate-700 text-[15px]">
-          <a href="#" class="px-3 py-2 text-brand-blue font-semibold hover:bg-slate-50 rounded-lg transition">Trang chủ</a>
-          <a href="#dich-vu" class="px-3 py-2 hover:text-brand-blue rounded-lg transition">Dịch vụ</a>
-          <a href="#bang-gia" class="px-3 py-2 hover:text-brand-blue rounded-lg transition">Bảng giá</a>
-          <a href="#uu-diem" class="px-3 py-2 hover:text-brand-blue rounded-lg transition">Ưu điểm</a>
-          <a href="#thiet-bi" class="px-3 py-2 hover:text-brand-blue rounded-lg transition">Thiết bị</a>
-          <a href="#quy-trinh" class="px-3 py-2 hover:text-brand-blue rounded-lg transition">Quy trình</a>
-          <a href="#hinh-anh" class="px-3 py-2 hover:text-brand-blue rounded-lg transition">Thực tế</a>
-          <a href="#faq" class="px-3 py-2 hover:text-brand-blue rounded-lg transition">FAQ</a>
+          <a href="#" class="px-3 py-2 text-brand-green font-bold hover:bg-emerald-50 rounded-lg transition">Trang chủ</a>
+          <a href="#dich-vu" class="px-3 py-2 hover:text-brand-green rounded-lg transition">Dịch vụ</a>
+          <a href="#bang-gia" class="px-3 py-2 hover:text-brand-green rounded-lg transition">Bảng giá</a>
+          <a href="#uu-diem" class="px-3 py-2 hover:text-brand-green rounded-lg transition">Ưu điểm</a>
+          <a href="#cam-nang" class="px-3 py-2 hover:text-brand-green rounded-lg transition text-brand-darkGreen font-semibold flex items-center gap-1">
+            <i class="fa-solid fa-newspaper text-xs text-brand-green"></i> Cẩm nang
+          </a>
+          <a href="#hinh-anh" class="px-3 py-2 hover:text-brand-green rounded-lg transition">Thực tế</a>
+          <a href="#faq" class="px-3 py-2 hover:text-brand-green rounded-lg transition">FAQ</a>
         </nav>
 
         <!-- CTA Header Button -->
         <div class="hidden sm:flex items-center gap-3">
-          <a href="tel:0355616583" class="dynamic-hotline-link inline-flex items-center gap-2 bg-gradient-to-r from-brand-orange to-amber-500 hover:from-brand-darkOrange hover:to-orange-600 text-white px-5 py-2.5 rounded-full font-bold text-sm shadow-md hover:shadow-lg transition transform active:scale-95">
-            <i class="fa-solid fa-phone-volume text-sm"></i>
+          <a href="tel:0355616583" class="dynamic-hotline-link inline-flex items-center gap-2 bg-gradient-to-r from-brand-green to-emerald-600 hover:from-brand-darkGreen hover:to-emerald-700 text-white px-5 py-2.5 rounded-full font-bold text-sm shadow-md hover:shadow-lg transition transform active:scale-95">
+            <i class="fa-solid fa-phone-volume text-sm text-brand-gold"></i>
             <span>Gọi/Zalo: <span class="dynamic-hotline-text">0355 616 583</span></span>
           </a>
         </div>
@@ -126,16 +137,15 @@
 
     <!-- Mobile Navigation Drawer -->
     <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 py-5 shadow-lg space-y-3">
-      <a href="#" class="block py-2 text-brand-blue font-bold">Trang chủ</a>
+      <a href="#" class="block py-2 text-brand-green font-bold">Trang chủ</a>
       <a href="#dich-vu" class="block py-2 text-slate-700 font-medium">Dịch vụ vệ sinh</a>
       <a href="#bang-gia" class="block py-2 text-slate-700 font-medium">Bảng giá tham khảo</a>
-      <a href="#uu-diem" class="block py-2 text-slate-700 font-medium">Ưu điểm CleanHanoi</a>
-      <a href="#thiet-bi" class="block py-2 text-slate-700 font-medium">Thiết bị máy móc</a>
-      <a href="#quy-trinh" class="block py-2 text-slate-700 font-medium">Quy trình làm việc</a>
+      <a href="#cam-nang" class="block py-2 text-slate-700 font-bold text-brand-green">Cẩm nang & Kinh nghiệm</a>
+      <a href="#uu-diem" class="block py-2 text-slate-700 font-medium">Ưu điểm Dọn Nè</a>
       <a href="#hinh-anh" class="block py-2 text-slate-700 font-medium">Hình ảnh thi công</a>
       <a href="#faq" class="block py-2 text-slate-700 font-medium">Hỏi đáp (FAQ)</a>
       <div class="pt-3 border-t flex flex-col gap-2">
-        <a href="tel:0355616583" class="dynamic-hotline-link w-full text-center py-2.5 bg-brand-orange text-white rounded-lg font-bold">Gọi ngay: <span class="dynamic-hotline-text">0355 616 583</span></a>
+        <a href="tel:0355616583" class="dynamic-hotline-link w-full text-center py-2.5 bg-brand-green text-white rounded-lg font-bold">Gọi ngay: <span class="dynamic-hotline-text">0355 616 583</span></a>
         <a href="https://zalo.me/0355616583" target="_blank" class="dynamic-zalo-link w-full text-center py-2.5 bg-brand-zalo text-white rounded-lg font-bold">Nhắn qua Zalo</a>
       </div>
     </div>
@@ -144,7 +154,7 @@
   <!-- ================= HERO BANNER ================= -->
   <section class="relative bg-slate-900 text-white py-16 lg:py-24 overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1920&q=80" alt="Vệ sinh công nghiệp" class="w-full h-full object-cover opacity-20">
+      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1920&q=80" alt="Vệ sinh công nghiệp Dọn Nè" class="w-full h-full object-cover opacity-25">
       <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/95 to-slate-900/80"></div>
     </div>
     
@@ -152,77 +162,77 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 bg-sky-500/20 border border-sky-400/30 text-sky-300 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold">
-            <i class="fa-solid fa-certificate text-brand-orange"></i> Khảo sát – Báo giá nhanh
+          <div class="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold">
+            <i class="fa-solid fa-sparkles text-brand-gold"></i> Dọn Nè – Khảo sát & Báo giá trong 15 phút
           </div>
 
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
             Dịch vụ vệ sinh công nghiệp <br class="hidden sm:block">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-amber-300">uy tín tại Hà Nội</span>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-green-300 to-amber-300">uy tín, sạch tận tâm tại Hà Nội</span>
           </h1>
 
           <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
-            <strong>CleanHanoi</strong> chuyên cung cấp các dịch vụ vệ sinh công nghiệp Hà Nội cho các khách hàng có nhu cầu vệ sinh nhà phố, biệt thự, căn hộ chung cư, văn phòng, nhà xưởng, showroom, cửa hàng, tòa nhà và các công trình sau xây dựng cần làm sạch chuyên sâu.
+            <strong>Dọn Nè</strong> chuyên cung cấp giải pháp làm sạch chuyên sâu cho căn hộ chung cư, nhà phố, biệt thự, văn phòng, nhà xưởng, showroom và công trình sau xây dựng. Máy móc hiện đại – Nhân viên tận tụy.
           </p>
 
           <p class="text-slate-400 text-sm italic">
-            * Khách hàng chỉ cần gửi ảnh/video hiện trạng để nhận tư vấn phương án & báo giá sát thực tế nhất.
+            * Chỉ cần gửi ảnh/video hiện trạng để nhận tư vấn giải pháp & báo giá chính xác nhất.
           </p>
 
           <!-- Buttons Group -->
           <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-            <a href="tel:0355616583" class="dynamic-hotline-link inline-flex items-center justify-center gap-3 bg-brand-orange hover:bg-brand-darkOrange text-white font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-orange-500/30 transition transform hover:-translate-y-0.5 active:translate-y-0">
+            <a href="tel:0355616583" class="dynamic-hotline-link inline-flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-darkGold text-slate-900 font-extrabold px-7 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
               <i class="fa-solid fa-phone text-lg"></i>
-              <span>Gọi ngay</span>
+              <span>Gọi ngay: <span class="dynamic-hotline-text">0355 616 583</span></span>
             </a>
 
-            <a href="https://zalo.me/0355616583" target="_blank" class="dynamic-zalo-link inline-flex items-center justify-center gap-3 bg-brand-zalo hover:bg-blue-600 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-blue-500/30 transition transform hover:-translate-y-0.5 active:translate-y-0">
+            <a href="https://zalo.me/0355616583" target="_blank" class="dynamic-zalo-link inline-flex items-center justify-center gap-3 bg-brand-zalo hover:bg-blue-600 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
               <i class="fa-solid fa-comment-dots text-lg"></i>
-              <span>Nhắn Zalo</span>
+              <span>Gửi ảnh qua Zalo</span>
             </a>
           </div>
 
           <!-- Trust Badges -->
           <div class="pt-6 grid grid-cols-3 gap-3 border-t border-slate-800 text-center">
             <div class="p-2.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <i class="fa-solid fa-users-gear text-cyan-400 text-xl mb-1 block"></i>
+              <i class="fa-solid fa-users-gear text-emerald-400 text-xl mb-1 block"></i>
               <span class="text-xs sm:text-sm font-medium text-slate-200">Đội thi công trực tiếp</span>
             </div>
             <div class="p-2.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <i class="fa-solid fa-file-invoice-dollar text-amber-400 text-xl mb-1 block"></i>
+              <i class="fa-solid fa-file-invoice-dollar text-brand-gold text-xl mb-1 block"></i>
               <span class="text-xs sm:text-sm font-medium text-slate-200">Báo giá theo hiện trạng</span>
             </div>
             <div class="p-2.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <i class="fa-solid fa-headset text-emerald-400 text-xl mb-1 block"></i>
-              <span class="text-xs sm:text-sm font-medium text-slate-200">Hỗ trợ 24/7 tại Hà Nội</span>
+              <i class="fa-solid fa-headset text-teal-400 text-xl mb-1 block"></i>
+              <span class="text-xs sm:text-sm font-medium text-slate-200">Hỗ trợ 24/7 Hà Nội</span>
             </div>
           </div>
 
         </div>
 
-        <!-- Hero Form (Lưu thẳng vào Admin) -->
+        <!-- Hero Form (Lưu thẳng vào CRM Admin) -->
         <div class="lg:col-span-5">
           <div class="bg-white text-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl border border-slate-100 relative">
             <div class="text-center mb-6">
-              <span class="text-xs font-bold uppercase tracking-wider text-brand-blue bg-sky-50 px-3 py-1 rounded-full">Tư vấn miễn phí</span>
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-green bg-emerald-50 px-3 py-1 rounded-full">Tư vấn miễn phí</span>
               <h3 class="text-xl font-bold text-slate-900 mt-2">Yêu Cầu Khảo Sát & Báo Giá</h3>
-              <p class="text-slate-500 text-xs mt-1">Phản hồi trong 5-10 phút qua Hotline hoặc Zalo</p>
+              <p class="text-slate-500 text-xs mt-1">Đội ngũ Dọn Nè phản hồi ngay trong 5-10 phút</p>
             </div>
 
             <form id="clientLeadForm" class="space-y-4">
               <div>
                 <label class="block text-xs font-semibold text-slate-700 mb-1">Họ và tên / Tên công ty</label>
-                <input type="text" id="leadName" required placeholder="Nguyễn Văn A" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-brand-blue outline-none text-sm">
+                <input type="text" id="leadName" required placeholder="Nguyễn Văn A" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-brand-green outline-none text-sm">
               </div>
 
               <div>
                 <label class="block text-xs font-semibold text-slate-700 mb-1">Số điện thoại / Zalo</label>
-                <input type="tel" id="leadPhone" required placeholder="0987 xxx xxx" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-brand-blue outline-none text-sm">
+                <input type="tel" id="leadPhone" required placeholder="0987 xxx xxx" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-brand-green outline-none text-sm">
               </div>
 
               <div>
                 <label class="block text-xs font-semibold text-slate-700 mb-1">Dịch vụ quan tâm</label>
-                <select id="leadService" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-brand-blue outline-none text-sm bg-white">
+                <select id="leadService" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-brand-green outline-none text-sm bg-white">
                   <option>Vệ sinh sau xây dựng</option>
                   <option>Vệ sinh văn phòng</option>
                   <option>Vệ sinh nhà xưởng</option>
@@ -236,10 +246,10 @@
 
               <div>
                 <label class="block text-xs font-semibold text-slate-700 mb-1">Địa chỉ tại Hà Nội</label>
-                <input type="text" id="leadAddress" placeholder="Ví dụ: Cầu Giấy, Nam Từ Liêm..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-brand-blue outline-none text-sm">
+                <input type="text" id="leadAddress" placeholder="Ví dụ: Cầu Giấy, Nam Từ Liêm..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 focus:border-brand-green outline-none text-sm">
               </div>
 
-              <button type="submit" class="w-full py-3 bg-gradient-to-r from-brand-blue to-cyan-600 hover:from-brand-darkBlue hover:to-cyan-700 text-white font-bold rounded-lg shadow-md transition transform active:scale-98">
+              <button type="submit" class="w-full py-3 bg-gradient-to-r from-brand-green to-emerald-700 hover:from-brand-darkGreen hover:to-emerald-800 text-white font-bold rounded-lg shadow-md transition transform active:scale-98">
                 GỬI YÊU CẦU BÁO GIÁ NGAY
               </button>
             </form>
@@ -254,10 +264,10 @@
   <section id="dich-vu" class="py-20 bg-slate-50 scroll-mt-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-4xl mx-auto mb-14">
-        <span class="text-brand-blue font-bold text-xs uppercase tracking-widest bg-sky-100 px-3 py-1 rounded-full">Dịch vụ vệ sinh công nghiệp Hà Nội CleanHanoi</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Các Hạng Mục Vệ Sinh Công Nghiệp Hà Nội Của CleanHanoi</h2>
+        <span class="text-brand-green font-bold text-xs uppercase tracking-widest bg-emerald-100 px-3 py-1 rounded-full">Hạng mục phục vụ</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Các Dịch Vụ Vệ Sinh Công Nghiệp Dọn Nè</h2>
         <p class="text-slate-600 mt-3 text-sm sm:text-base leading-relaxed">
-          Hà Nội hiện nay là một trong những thành phố phát triển bậc nhất Việt Nam, vì vậy nhu cầu vệ sinh công nghiệp ở Hà Nội ngày một tăng cao và đa dạng. CleanHanoi cung cấp giải pháp làm sạch toàn diện cho mọi loại hình công trình. Bấm vào từng dịch vụ để xem chi tiết quy trình, thiết bị và báo giá cụ thể.
+          Dọn Nè cung cấp giải pháp làm sạch toàn diện cho mọi loại hình công trình tại Hà Nội. Bấm vào từng dịch vụ để xem chi tiết quy trình, thiết bị và báo giá cụ thể.
         </p>
       </div>
 
@@ -267,53 +277,12 @@
     </div>
   </section>
 
-  <!-- ================= GIỚI THIỆU ================= -->
-  <section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-6 relative">
-          <div class="relative rounded-3xl overflow-hidden shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" alt="Đội ngũ CleanHanoi" class="w-full h-full object-cover">
-          </div>
-          <div class="absolute -bottom-6 -right-6 bg-brand-orange text-white p-6 rounded-2xl shadow-xl hidden sm:block">
-            <span class="text-3xl font-black block">10+ Năm</span>
-            <span class="text-xs font-semibold uppercase tracking-wider">Kinh nghiệm thực tế</span>
-          </div>
-        </div>
-
-        <div class="lg:col-span-6 space-y-6">
-          <span class="text-brand-blue font-bold text-xs uppercase tracking-widest bg-sky-100 px-3 py-1 rounded-full">Giới thiệu</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
-            Đơn Vị Vệ Sinh Công Nghiệp Tại Hà Nội – CleanHanoi
-          </h2>
-          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-            CleanHanoi là đơn vị vệ sinh công nghiệp Hà Nội với hơn 10 năm kinh nghiệm thi công các công trình thực tế. CleanHanoi tiếp nhận các nhu cầu vệ sinh công nghiệp tại Hà Nội cho khách hàng cần làm sạch nhà phố, văn phòng, cửa hàng, showroom, nhà xưởng và công trình sau xây dựng tại Hà Nội.
-          </p>
-          <div class="space-y-3 pt-2 text-sm font-semibold text-slate-800">
-            <div class="flex items-center gap-3">
-              <i class="fa-solid fa-circle-check text-brand-blue text-lg"></i>
-              <span>Đội ngũ nhân viên chuyên nghiệp</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <i class="fa-solid fa-circle-check text-brand-blue text-lg"></i>
-              <span>Thiết bị máy móc hiện đại</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <i class="fa-solid fa-circle-check text-brand-blue text-lg"></i>
-              <span>Hóa chất làm sạch hiệu quả, an toàn</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= BẢNG GIÁ ================= -->
-  <section id="bang-gia" class="py-20 bg-slate-50 scroll-mt-20">
+  <!-- ================= BẢNG GIÁ DỊCH VỤ ================= -->
+  <section id="bang-gia" class="py-20 bg-white scroll-mt-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-orange-100 px-3 py-1 rounded-full">Bảng giá 2026</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Bảng Giá Dịch Vụ Vệ Sinh Công Nghiệp Hà Nội</h2>
+        <span class="text-brand-green font-bold text-xs uppercase tracking-widest bg-emerald-100 px-3 py-1 rounded-full">Bảng giá 2026</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Bảng Giá Dịch Vụ Vệ Sinh Công Nghiệp Dọn Nè</h2>
         <p class="text-slate-600 mt-2 text-sm sm:text-base">Mức giá tham khảo minh bạch, chi phí thực tế phụ thuộc vào diện tích và tình trạng vết bẩn.</p>
       </div>
 
@@ -323,7 +292,7 @@
             <tr class="bg-slate-900 text-white">
               <th class="py-4 px-5 font-bold">Dịch vụ</th>
               <th class="py-4 px-5 font-bold hidden md:table-cell">Mô tả</th>
-              <th class="py-4 px-5 font-bold text-brand-orange">Giá tham khảo</th>
+              <th class="py-4 px-5 font-bold text-brand-gold">Giá tham khảo</th>
               <th class="py-4 px-5 font-bold">Ghi chú</th>
             </tr>
           </thead>
@@ -335,141 +304,29 @@
     </div>
   </section>
 
-  <!-- ================= ƯU ĐIỂM 01 -> 06 ================= -->
-  <section id="uu-diem" class="py-20 bg-slate-900 text-white scroll-mt-20">
+  <!-- ================= MỤC BÀI VIẾT / CẨM NANG KÉO TRAFFIC SEO ================= -->
+  <section id="cam-nang" class="py-20 bg-slate-50 scroll-mt-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="text-cyan-400 font-bold text-xs uppercase tracking-widest bg-cyan-950 border border-cyan-800 px-3 py-1 rounded-full">ƯU ĐIỂM CỦA CleanHanoi</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold mt-3">Vì Sao Chọn Dịch Vụ Vệ Sinh Công Nghiệp Của CleanHanoi?</h2>
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-brand-green font-bold text-xs uppercase tracking-widest bg-emerald-100 px-3 py-1 rounded-full">Cẩm nang & Kinh nghiệm</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Tin Tức & Mẹo Vệ Sinh Mới Nhất</h2>
+          <p class="text-slate-600 text-sm mt-1">Chia sẻ kiến thức dọn dẹp nhà cửa, văn phòng và bảo quản nội thất chuẩn chuyên gia.</p>
+        </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-slate-800/80 border border-slate-700/60 p-6 rounded-2xl">
-          <span class="text-3xl font-black text-cyan-400 mb-2 block">01</span>
-          <h3 class="text-lg font-bold text-white mb-2">Đội vệ sinh công nghiệp 24/7</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Sắp xếp nhân sự thi công cho nhà ở, văn phòng, nhà xưởng và công trình sau xây dựng ngoài giờ hành chính, lễ, tết linh hoạt theo nhu cầu.</p>
-        </div>
-        <div class="bg-slate-800/80 border border-slate-700/60 p-6 rounded-2xl">
-          <span class="text-3xl font-black text-cyan-400 mb-2 block">02</span>
-          <h3 class="text-lg font-bold text-white mb-2">Tư vấn giải pháp xử lý thực tế</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Tiếp nhận ảnh/video hoặc khảo sát trực tiếp để đánh giá diện tích, mức độ bẩn và lên phương án thi công cụ thể, an toàn.</p>
-        </div>
-        <div class="bg-slate-800/80 border border-slate-700/60 p-6 rounded-2xl">
-          <span class="text-3xl font-black text-cyan-400 mb-2 block">03</span>
-          <h3 class="text-lg font-bold text-white mb-2">Báo giá linh hoạt theo nhu cầu</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Báo giá theo từng hạng mục thực tế, không áp dụng chi phí cố định theo gói mặc định.</p>
-        </div>
-        <div class="bg-slate-800/80 border border-slate-700/60 p-6 rounded-2xl">
-          <span class="text-3xl font-black text-cyan-400 mb-2 block">04</span>
-          <h3 class="text-lg font-bold text-white mb-2">Có máy móc, hóa chất chuyên dụng</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Sử dụng thiết bị máy móc, hóa chất hiện đại cho từng hạng mục. Tiêu chí: nhanh, sạch, an toàn, tiết kiệm.</p>
-        </div>
-        <div class="bg-slate-800/80 border border-slate-700/60 p-6 rounded-2xl">
-          <span class="text-3xl font-black text-cyan-400 mb-2 block">05</span>
-          <h3 class="text-lg font-bold text-white mb-2">Thi công nhiều hạng mục</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Vệ sinh sau xây dựng, tổng vệ sinh nhà cửa, văn phòng, nhà xưởng, lau kính, thau rửa bể nước, giặt sofa, thảm...</p>
-        </div>
-        <div class="bg-slate-800/80 border border-slate-700/60 p-6 rounded-2xl">
-          <span class="text-3xl font-black text-cyan-400 mb-2 block">06</span>
-          <h3 class="text-lg font-bold text-white mb-2">Bảo hành, khuyến mãi 10-20%</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Bảo hành tối thiểu 24h – 7 ngày. Khách hàng sử dụng dịch vụ lần thứ 2 được giảm giá từ 10 – 20%.</p>
-        </div>
+      <div id="blogClientGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Rendered by JavaScript from Admin Blog CMS -->
       </div>
     </div>
   </section>
 
-  <!-- ================= THIẾT BỊ MÁY MÓC ================= -->
-  <section id="thiet-bi" class="py-20 bg-white scroll-mt-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="text-brand-blue font-bold text-xs uppercase tracking-widest bg-sky-100 px-3 py-1 rounded-full">Thiết bị thi công</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Máy Móc & Hóa Chất Chuyên Dụng</h2>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-        <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 text-center p-4 group hover:shadow-lg transition">
-          <div class="h-36 rounded-xl overflow-hidden mb-3">
-            <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=400&q=80" alt="Máy chà sàn" class="w-full h-full object-cover card-img-zoom">
-          </div>
-          <h4 class="font-bold text-slate-900 text-sm mb-1">Máy chà sàn công nghiệp</h4>
-          <p class="text-xs text-slate-500">Chà rửa sàn diện tích lớn, tẩy sạch ố bẩn.</p>
-        </div>
-        <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 text-center p-4 group hover:shadow-lg transition">
-          <div class="h-36 rounded-xl overflow-hidden mb-3">
-            <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=400&q=80" alt="Máy hút bụi" class="w-full h-full object-cover card-img-zoom">
-          </div>
-          <h4 class="font-bold text-slate-900 text-sm mb-1">Máy hút bụi công suất lớn</h4>
-          <p class="text-xs text-slate-500">Hút bụi mịn sau xây dựng và nước bẩn.</p>
-        </div>
-        <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 text-center p-4 group hover:shadow-lg transition">
-          <div class="h-36 rounded-xl overflow-hidden mb-3">
-            <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=400&q=80" alt="Máy phun hút" class="w-full h-full object-cover card-img-zoom">
-          </div>
-          <h4 class="font-bold text-slate-900 text-sm mb-1">Máy phun hút giặt thảm</h4>
-          <p class="text-xs text-slate-500">Giặt thảm, sofa, đệm với khả năng diệt khuẩn.</p>
-        </div>
-        <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 text-center p-4 group hover:shadow-lg transition">
-          <div class="h-36 rounded-xl overflow-hidden mb-3">
-            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=400&q=80" alt="Dụng cụ" class="w-full h-full object-cover card-img-zoom">
-          </div>
-          <h4 class="font-bold text-slate-900 text-sm mb-1">Dụng cụ chuyên dụng</h4>
-          <p class="text-xs text-slate-500">Cây gạt kính, sủi sàn, khăn microfiber.</p>
-        </div>
-        <div class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 text-center p-4 group hover:shadow-lg transition">
-          <div class="h-36 rounded-xl overflow-hidden mb-3">
-            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=80" alt="Hóa chất" class="w-full h-full object-cover card-img-zoom">
-          </div>
-          <h4 class="font-bold text-slate-900 text-sm mb-1">Hóa chất an toàn</h4>
-          <p class="text-xs text-slate-500">Hóa chất chính hãng, không độc hại.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= QUY TRÌNH 5 BƯỚC ================= -->
-  <section id="quy-trinh" class="py-20 bg-slate-50 scroll-mt-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="text-brand-blue font-bold text-xs uppercase tracking-widest bg-sky-100 px-3 py-1 rounded-full">Tiêu chuẩn thi công</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Quy Trình Vệ Sinh Công Nghiệp Tại Hà Nội</h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-        <div class="bg-white border border-slate-100 rounded-2xl p-5 text-center shadow-sm">
-          <div class="w-10 h-10 rounded-full bg-brand-blue text-white font-black flex items-center justify-center mx-auto mb-3 shadow">1</div>
-          <h3 class="font-bold text-slate-900 mb-1 text-sm">Tiếp nhận nhu cầu</h3>
-          <p class="text-xs text-slate-500">Khách gửi ảnh/video hoặc địa chỉ cần khảo sát.</p>
-        </div>
-        <div class="bg-white border border-slate-100 rounded-2xl p-5 text-center shadow-sm">
-          <div class="w-10 h-10 rounded-full bg-brand-blue text-white font-black flex items-center justify-center mx-auto mb-3 shadow">2</div>
-          <h3 class="font-bold text-slate-900 mb-1 text-sm">Tư vấn đúng hạng mục</h3>
-          <p class="text-xs text-slate-500">Đánh giá mức độ bẩn và lên phương án phù hợp.</p>
-        </div>
-        <div class="bg-white border border-slate-100 rounded-2xl p-5 text-center shadow-sm">
-          <div class="w-10 h-10 rounded-full bg-brand-blue text-white font-black flex items-center justify-center mx-auto mb-3 shadow">3</div>
-          <h3 class="font-bold text-slate-900 mb-1 text-sm">Báo giá minh bạch</h3>
-          <p class="text-xs text-slate-500">Báo giá theo diện tích hoặc theo gói rõ ràng.</p>
-        </div>
-        <div class="bg-white border border-slate-100 rounded-2xl p-5 text-center shadow-sm">
-          <div class="w-10 h-10 rounded-full bg-brand-blue text-white font-black flex items-center justify-center mx-auto mb-3 shadow">4</div>
-          <h3 class="font-bold text-slate-900 mb-1 text-sm">Bố trí đội thi công</h3>
-          <p class="text-xs text-slate-500">Sắp xếp nhân sự và máy móc chuẩn tiến độ.</p>
-        </div>
-        <div class="bg-white border border-slate-100 rounded-2xl p-5 text-center shadow-sm">
-          <div class="w-10 h-10 rounded-full bg-brand-blue text-white font-black flex items-center justify-center mx-auto mb-3 shadow">5</div>
-          <h3 class="font-bold text-slate-900 mb-1 text-sm">Kiểm tra & Bàn giao</h3>
-          <p class="text-xs text-slate-500">Nghiệm thu sạch sẽ mới thanh toán.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= HÌNH ẢNH THỰC TẾ ================= -->
+  <!-- ================= HÌNH ẢNH THI CÔNG THỰC TẾ ================= -->
   <section id="hinh-anh" class="py-20 bg-slate-900 text-white scroll-mt-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="text-cyan-400 font-bold text-xs uppercase tracking-widest bg-cyan-950 border border-cyan-800 px-3 py-1 rounded-full">Dự án đã làm</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold mt-3">Hình Ảnh Thi Công Thực Tế Tại Hà Nội</h2>
+        <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-emerald-950 border border-emerald-800 px-3 py-1 rounded-full">Dự án đã làm</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mt-3">Hình Ảnh Dọn Nè Thi Công Thực Tế</h2>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -513,89 +370,11 @@
     </div>
   </section>
 
-  <!-- ================= ĐÁNH GIÁ KHÁCH HÀNG ================= -->
-  <section class="py-20 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="text-brand-orange font-bold text-xs uppercase tracking-widest bg-orange-100 px-3 py-1 rounded-full">Review thực tế</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Khách Hàng Nói Gì Về CleanHanoi?</h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
-          <div>
-            <div class="flex text-amber-400 text-sm mb-3">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <p class="text-slate-600 text-sm leading-relaxed italic mb-4">“Đội vệ sinh đến đúng giờ, xử lý bụi sau xây dựng khá kỹ. Những chỗ kính, nền và vết sơn còn sót được kiểm tra lại trước khi bàn giao.”</p>
-          </div>
-          <div class="border-t pt-4">
-            <h4 class="font-bold text-slate-900 text-sm">Khách căn hộ tại Cầu Giấy</h4>
-            <span class="text-xs text-slate-400">Dịch vụ: Vệ sinh sau xây dựng</span>
-          </div>
-        </div>
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
-          <div>
-            <div class="flex text-amber-400 text-sm mb-3">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <p class="text-slate-600 text-sm leading-relaxed italic mb-4">“Văn phòng cần giặt thảm ngoài giờ hành chính. CleanHanoi bố trí nhân sự nhanh, làm gọn và không ảnh hưởng đến lịch làm việc của công ty.”</p>
-          </div>
-          <div class="border-t pt-4">
-            <h4 class="font-bold text-slate-900 text-sm">Quản lý văn phòng tại Nam Từ Liêm</h4>
-            <span class="text-xs text-slate-400">Dịch vụ: Giặt thảm văn phòng</span>
-          </div>
-        </div>
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
-          <div>
-            <div class="flex text-amber-400 text-sm mb-3">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <p class="text-slate-600 text-sm leading-relaxed italic mb-4">“Nhà xưởng diện tích lớn nhưng đội thi công có máy chà sàn và máy hút bụi công nghiệp. Tiến độ rõ ràng, nghiệm thu từng khu vực.”</p>
-          </div>
-          <div class="border-t pt-4">
-            <h4 class="font-bold text-slate-900 text-sm">Đại diện nhà xưởng tại Long Biên</h4>
-            <span class="text-xs text-slate-400">Dịch vụ: Vệ sinh nhà xưởng</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= KHU VỰC PHỤC VỤ ================= -->
-  <section id="khu-vuc" class="py-16 bg-white border-t border-slate-100 scroll-mt-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <span class="text-brand-blue font-bold text-xs uppercase tracking-widest bg-sky-100 px-3 py-1 rounded-full">Khu vực</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Khu Vực Phục Vụ Tại Hà Nội</h2>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
-        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
-          <h4 class="font-bold text-brand-blue mb-2 flex items-center gap-1.5"><i class="fa-solid fa-location-dot"></i> Quận trung tâm</h4>
-          <p class="text-slate-600 leading-relaxed text-xs">Hoàn Kiếm, Ba Đình, Đống Đa, Hai Bà Trưng</p>
-        </div>
-        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
-          <h4 class="font-bold text-brand-blue mb-2 flex items-center gap-1.5"><i class="fa-solid fa-location-dot"></i> Khu văn phòng</h4>
-          <p class="text-slate-600 leading-relaxed text-xs">Cầu Giấy, Thanh Xuân, Nam Từ Liêm, Bắc Từ Liêm</p>
-        </div>
-        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
-          <h4 class="font-bold text-brand-blue mb-2 flex items-center gap-1.5"><i class="fa-solid fa-location-dot"></i> Khu đô thị lớn</h4>
-          <p class="text-slate-600 leading-relaxed text-xs">Hà Đông, Hoàng Mai, Long Biên, Tây Hồ</p>
-        </div>
-        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
-          <h4 class="font-bold text-brand-blue mb-2 flex items-center gap-1.5"><i class="fa-solid fa-location-dot"></i> Khu mở rộng</h4>
-          <p class="text-slate-600 leading-relaxed text-xs">Gia Lâm, Đông Anh, Thanh Trì, Hoài Đức</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ================= FAQ ================= -->
-  <section id="faq" class="py-20 bg-slate-50 scroll-mt-20">
+  <section id="faq" class="py-20 bg-white scroll-mt-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <span class="text-brand-blue font-bold text-xs uppercase tracking-widest bg-sky-100 px-3 py-1 rounded-full">FAQ</span>
+        <span class="text-brand-green font-bold text-xs uppercase tracking-widest bg-emerald-100 px-3 py-1 rounded-full">FAQ</span>
         <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Câu Hỏi Thường Gặp (FAQ)</h2>
       </div>
 
@@ -612,16 +391,13 @@
         
         <div class="space-y-4">
           <div class="flex items-center gap-2">
-            <div class="w-9 h-9 rounded-lg bg-brand-blue flex items-center justify-center text-white font-bold">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
-            </div>
-            <span class="text-xl font-bold text-white">Clean<span class="text-brand-blue">Hanoi</span></span>
+            <span class="text-2xl font-black text-white">DỌN <span class="text-brand-green">NÈ</span></span>
           </div>
           <p class="text-xs leading-relaxed text-slate-400">
-            CleanHanoi – Đơn vị hàng đầu với hơn 10 năm kinh nghiệm thi công vệ sinh công nghiệp, văn phòng, nhà xưởng và công trình sau xây dựng tại Hà Nội.
+            Dọn Nè – Đơn vị hàng đầu với hơn 10 năm kinh nghiệm thi công vệ sinh công nghiệp, văn phòng, nhà xưởng và công trình sau xây dựng tại Hà Nội.
           </p>
           <div class="text-white font-bold text-sm">
-            Hotline: <a href="tel:0355616583" class="dynamic-hotline-link text-brand-orange"><span class="dynamic-hotline-text">0355 616 583</span></a>
+            Hotline: <a href="tel:0355616583" class="dynamic-hotline-link text-brand-gold"><span class="dynamic-hotline-text">0355 616 583</span></a>
           </div>
         </div>
 
@@ -633,10 +409,10 @@
         </div>
 
         <div>
-          <h4 class="text-white font-bold text-base mb-4 border-b border-slate-800 pb-2">Hệ Thống Quản Trị</h4>
+          <h4 class="text-white font-bold text-base mb-4 border-b border-slate-800 pb-2">Quản Trị Hệ Thống</h4>
           <ul class="space-y-3 text-xs">
-            <li><button onclick="openAdminLogin()" class="px-3 py-1.5 bg-slate-800 hover:bg-brand-blue text-white rounded-lg font-bold transition flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-sky-400"></i> Đăng nhập Quản Trị Admin</button></li>
-            <li><span class="text-slate-500">Mật khẩu: <code class="text-sky-300">admin123</code></span></li>
+            <li><button onclick="openAdminLogin()" class="px-3 py-2 bg-brand-darkGreen hover:bg-brand-green text-white font-bold rounded-lg transition flex items-center gap-2 shadow"><i class="fa-solid fa-chart-line text-brand-gold"></i> Bảng Quản Trị & Kế Toán</button></li>
+            <li><span class="text-slate-500">Mật khẩu: <code class="text-emerald-400">admin123</code></span></li>
           </ul>
         </div>
 
@@ -644,15 +420,15 @@
           <h4 class="text-white font-bold text-base mb-4 border-b border-slate-800 pb-2">Địa Chỉ Chi Nhánh</h4>
           <ul class="space-y-3 text-xs text-slate-400">
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-map-pin text-brand-orange mt-0.5"></i>
+              <i class="fa-solid fa-map-pin text-brand-gold mt-0.5"></i>
               <span id="branchDisplay1">31/12 Phúc Lợi, Long Biên, Hà Nội</span>
             </li>
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-map-pin text-brand-orange mt-0.5"></i>
+              <i class="fa-solid fa-map-pin text-brand-gold mt-0.5"></i>
               <span id="branchDisplay2">Số 6 Ngách 5/12 Lê Trọng Tấn, La Khê, Hà Đông, Hà Nội</span>
             </li>
             <li class="flex items-start gap-2">
-              <i class="fa-solid fa-map-pin text-brand-orange mt-0.5"></i>
+              <i class="fa-solid fa-map-pin text-brand-gold mt-0.5"></i>
               <span id="branchDisplay3">Nhà C2, Làng Quốc Tế Thăng Long, Cầu Giấy, Hà Nội</span>
             </li>
           </ul>
@@ -661,49 +437,70 @@
       </div>
 
       <div class="mt-12 pt-6 border-t border-slate-900 text-center text-xs text-slate-500">
-        © 2026 CleanHanoi – Vệ sinh công nghiệp Hà Nội. All rights reserved.
+        © 2026 Dọn Nè – Vệ sinh công nghiệp Hà Nội. All rights reserved.
       </div>
     </div>
   </footer>
 
-  <!-- ================= POPUP MODAL XEM CHI TIẾT DỊCH VỤ ================= -->
+  <!-- ================= POPUP MODAL ĐỌC BÀI VIẾT BLOG ================= -->
+  <div id="blogModal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100 relative">
+      <button onclick="closeBlogModal()" class="absolute top-4 right-4 z-10 w-9 h-9 bg-slate-900/60 hover:bg-slate-900 text-white rounded-full flex items-center justify-center transition">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+      <div class="h-64 sm:h-80 w-full overflow-hidden relative">
+        <img id="blogModalImg" src="" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent"></div>
+        <div class="absolute bottom-4 left-6 right-6">
+          <span id="blogModalCategory" class="bg-brand-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Kinh nghiệm</span>
+          <h3 id="blogModalTitle" class="text-2xl sm:text-3xl font-extrabold text-white mt-2 leading-tight"></h3>
+          <span id="blogModalDate" class="text-xs text-slate-300 mt-1 block"></span>
+        </div>
+      </div>
+      <div class="p-6 sm:p-8 space-y-6">
+        <div id="blogModalContent" class="text-slate-700 text-sm leading-relaxed space-y-4"></div>
+        <div class="p-4 bg-emerald-50 rounded-2xl border border-emerald-200 flex flex-col sm:flex-row justify-between items-center gap-3">
+          <span class="text-xs font-bold text-brand-darkGreen">Cần tư vấn vệ sinh công nghiệp ngay?</span>
+          <a href="tel:0355616583" class="dynamic-hotline-link px-5 py-2.5 bg-brand-green hover:bg-brand-darkGreen text-white font-bold rounded-xl text-xs shadow transition">Gọi ngay: <span class="dynamic-hotline-text">0355 616 583</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= POPUP MODAL DỊCH VỤ ================= -->
   <div id="serviceModal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4">
     <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100 relative">
       <button onclick="closeServiceModal()" class="absolute top-4 right-4 z-10 w-9 h-9 bg-slate-900/60 hover:bg-slate-900 text-white rounded-full flex items-center justify-center transition">
         <i class="fa-solid fa-xmark text-lg"></i>
       </button>
-
       <div class="h-60 sm:h-72 w-full overflow-hidden relative">
-        <img id="modalImg" src="" alt="" class="w-full h-full object-cover">
+        <img id="modalImg" src="" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
         <div class="absolute bottom-4 left-6 right-6">
-          <span class="bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Dịch vụ CleanHanoi</span>
+          <span class="bg-brand-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Dịch vụ Dọn Nè</span>
           <h3 id="modalTitle" class="text-2xl sm:text-3xl font-extrabold text-white mt-1.5"></h3>
         </div>
       </div>
-
       <div class="p-6 sm:p-8 space-y-6">
         <div>
           <h4 class="font-bold text-slate-900 text-base mb-2 flex items-center gap-2">
-            <i class="fa-solid fa-list-check text-brand-blue"></i> Quy trình công việc chi tiết
+            <i class="fa-solid fa-list-check text-brand-green"></i> Quy trình công việc chi tiết
           </h4>
           <p id="modalDesc" class="text-slate-600 text-sm leading-relaxed"></p>
         </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-sky-50/70 p-4 rounded-2xl border border-sky-100 text-xs">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-emerald-50/70 p-4 rounded-2xl border border-emerald-100 text-xs">
           <div>
             <span class="font-bold text-slate-900 block mb-1">🛠 Thiết bị & Hóa chất:</span>
-            <span id="modalEquipment" class="text-slate-600">Máy móc chuyên dụng công suất lớn, hóa chất ngoại nhập an toàn.</span>
+            <span id="modalEquipment" class="text-slate-600"></span>
           </div>
           <div>
             <span class="font-bold text-slate-900 block mb-1">💰 Giá tham khảo:</span>
-            <span id="modalPrice" class="text-brand-orange font-bold text-sm"></span>
+            <span id="modalPrice" class="text-brand-gold font-bold text-sm"></span>
           </div>
         </div>
-
         <div class="flex flex-col sm:flex-row gap-3 pt-2">
-          <a href="tel:0355616583" class="dynamic-hotline-link flex-1 text-center py-3 bg-brand-orange hover:bg-brand-darkOrange text-white font-bold rounded-xl text-sm shadow transition">
-            <i class="fa-solid fa-phone mr-1"></i> Gọi đặt lịch: <span class="dynamic-hotline-text">0355 616 583</span>
+          <a href="tel:0355616583" class="dynamic-hotline-link flex-1 text-center py-3 bg-brand-gold hover:bg-brand-darkGold text-slate-900 font-bold rounded-xl text-sm shadow transition">
+            <i class="fa-solid fa-phone mr-1"></i> Gọi đặt lịch ngay
           </a>
           <a href="https://zalo.me/0355616583" target="_blank" class="dynamic-zalo-link flex-1 text-center py-3 bg-brand-zalo hover:bg-blue-600 text-white font-bold rounded-xl text-sm shadow transition">
             <i class="fa-solid fa-comment-dots mr-1"></i> Nhắn Zalo gửi ảnh báo giá
@@ -719,67 +516,143 @@
       <i class="fa-solid fa-comment-dots"></i>
       <span class="absolute right-full mr-3 bg-slate-900 text-white text-xs py-1.5 px-3 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition shadow">Nhắn Zalo</span>
     </a>
-    
-    <a href="tel:0355616583" class="dynamic-hotline-link w-14 h-14 bg-brand-orange hover:bg-brand-darkOrange text-white rounded-full flex items-center justify-center text-2xl shadow-xl transition transform hover:scale-110 relative group" title="Gọi Hotline">
-      <i class="fa-solid fa-phone-volume shake-anim"></i>
+    <a href="tel:0355616583" class="dynamic-hotline-link w-14 h-14 bg-brand-green hover:bg-brand-darkGreen text-white rounded-full flex items-center justify-center text-2xl shadow-xl transition transform hover:scale-110 relative group" title="Gọi Hotline">
+      <i class="fa-solid fa-phone-volume shake-anim text-brand-gold"></i>
       <span class="absolute right-full mr-3 bg-slate-900 text-white text-xs py-1.5 px-3 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition shadow">Gọi ngay: <span class="dynamic-hotline-text">0355 616 583</span></span>
     </a>
   </div>
 
   <!-- ================= MOBILE STICKY BOTTOM BAR ================= -->
   <div class="fixed bottom-0 left-0 right-0 z-50 sm:hidden bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 grid grid-cols-2 gap-2 shadow-2xl">
-    <a href="tel:0355616583" class="dynamic-hotline-link flex items-center justify-center gap-2 bg-brand-orange text-white py-2.5 rounded-xl font-bold text-xs">
-      <i class="fa-solid fa-phone-volume shake-anim"></i> Gọi ngay
+    <a href="tel:0355616583" class="dynamic-hotline-link flex items-center justify-center gap-2 bg-brand-green text-white py-2.5 rounded-xl font-bold text-xs">
+      <i class="fa-solid fa-phone-volume shake-anim text-brand-gold"></i> Gọi ngay
     </a>
     <a href="https://zalo.me/0355616583" target="_blank" class="dynamic-zalo-link flex items-center justify-center gap-2 bg-brand-zalo text-white py-2.5 rounded-xl font-bold text-xs">
       <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo
     </a>
   </div>
 
-  <!-- ================= MODAL ADMIN CONTROL ================= -->
+  <!-- ================= SIÊU MODAL ADMIN CONTROL PANEL ================= -->
   <div id="adminModal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-2 sm:p-4">
+    <!-- Màn hình Đăng nhập -->
     <div id="adminLoginScreen" class="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl border border-slate-200 text-center relative">
       <button onclick="closeAdminModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700"><i class="fa-solid fa-xmark text-xl"></i></button>
-      <div class="w-16 h-16 bg-sky-100 text-brand-blue rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4">
+      <div class="w-16 h-16 bg-emerald-100 text-brand-green rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4">
         <i class="fa-solid fa-shield-halved"></i>
       </div>
-      <h2 class="text-2xl font-black text-slate-900">CleanHanoi Admin</h2>
-      <p class="text-slate-500 text-xs mt-1 mb-6">Đăng nhập để xem đơn báo giá & chỉnh sửa website</p>
+      <h2 class="text-2xl font-black text-slate-900">Dọn Nè Admin Control</h2>
+      <p class="text-slate-500 text-xs mt-1 mb-6">Đăng nhập để xem Traffic, Đơn hàng, Kế toán & Đăng bài</p>
 
       <form onsubmit="handleAdminLogin(event)" class="space-y-4">
         <div>
           <label class="block text-left text-xs font-bold text-slate-700 mb-1">Mật khẩu quản trị</label>
-          <input type="password" id="adminPassInput" required placeholder="Nhập: admin123" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-blue outline-none text-sm">
+          <input type="password" id="adminPassInput" required placeholder="Nhập: admin123" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-green outline-none text-sm">
         </div>
-        <button type="submit" class="w-full py-3.5 bg-brand-blue hover:bg-brand-darkBlue text-white font-bold rounded-xl shadow-lg transition">
+        <button type="submit" class="w-full py-3.5 bg-brand-green hover:bg-brand-darkGreen text-white font-bold rounded-xl shadow-lg transition">
           ĐĂNG NHẬP
         </button>
       </form>
     </div>
 
+    <!-- Bảng Điều Khiển Admin (Sau khi đăng nhập) -->
     <div id="adminDashboardScreen" class="hidden bg-slate-100 rounded-3xl max-w-6xl w-full max-h-[95vh] overflow-hidden shadow-2xl border border-slate-200 flex flex-col">
       <div class="bg-slate-900 text-white p-4 sm:px-6 flex justify-between items-center">
         <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-lg bg-brand-blue flex items-center justify-center font-bold"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-          <span class="font-black text-lg">CleanHanoi <span class="text-sky-400 text-sm">Admin Control</span></span>
+          <div class="w-9 h-9 rounded-lg bg-brand-green flex items-center justify-center font-bold text-brand-gold"><i class="fa-solid fa-sparkles"></i></div>
+          <span class="font-black text-lg">DỌN NÈ <span class="text-emerald-400 text-xs font-semibold">Master Admin & Finance</span></span>
         </div>
         <button onclick="closeAdminModal()" class="px-3 py-1.5 bg-slate-800 hover:bg-red-600 text-xs font-bold rounded-lg transition"><i class="fa-solid fa-xmark mr-1"></i> Đóng</button>
       </div>
 
+      <!-- Navigation Tabs -->
       <div class="bg-white border-b border-slate-200 px-6 flex gap-2 overflow-x-auto text-sm font-bold">
-        <button onclick="switchAdminTab('leads')" id="adminTabBtn-leads" class="py-3 px-4 border-b-2 border-brand-blue text-brand-blue flex items-center gap-2">
-          <i class="fa-solid fa-bell"></i> Đơn Báo Giá Mới <span id="adminLeadCount" class="bg-brand-orange text-white text-[10px] px-2 py-0.5 rounded-full">0</span>
+        <button onclick="switchAdminTab('traffic')" id="adminTabBtn-traffic" class="py-3 px-4 border-b-2 border-brand-green text-brand-green flex items-center gap-2">
+          <i class="fa-solid fa-chart-line"></i> Dashboard Traffic
+        </button>
+        <button onclick="switchAdminTab('leads')" id="adminTabBtn-leads" class="py-3 px-4 border-b-2 border-transparent text-slate-500 hover:text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-bell"></i> Đơn Báo Giá <span id="adminLeadCount" class="bg-brand-gold text-slate-900 text-[10px] font-bold px-2 py-0.5 rounded-full">0</span>
+        </button>
+        <button onclick="switchAdminTab('finance')" id="adminTabBtn-finance" class="py-3 px-4 border-b-2 border-transparent text-slate-500 hover:text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-wallet"></i> Kế Toán Thu - Chi
+        </button>
+        <button onclick="switchAdminTab('blog')" id="adminTabBtn-blog" class="py-3 px-4 border-b-2 border-transparent text-slate-500 hover:text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-newspaper"></i> Đăng Bài SEO
         </button>
         <button onclick="switchAdminTab('services')" id="adminTabBtn-services" class="py-3 px-4 border-b-2 border-transparent text-slate-500 hover:text-slate-900 flex items-center gap-2">
-          <i class="fa-solid fa-tags"></i> Sửa Dịch Vụ & Bảng Giá
+          <i class="fa-solid fa-tags"></i> Sửa Giá & Ảnh
         </button>
         <button onclick="switchAdminTab('config')" id="adminTabBtn-config" class="py-3 px-4 border-b-2 border-transparent text-slate-500 hover:text-slate-900 flex items-center gap-2">
           <i class="fa-solid fa-sliders"></i> Sửa Hotline & Chi Nhánh
         </button>
       </div>
 
+      <!-- Content Area -->
       <div class="p-4 sm:p-6 overflow-y-auto flex-1 space-y-6">
-        <div id="adminTab-leads" class="space-y-4">
+        
+        <!-- ================= TAB 1: TRAFFIC DASHBOARD ================= -->
+        <div id="adminTab-traffic" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+              <span class="text-xs text-slate-500 font-bold uppercase block mb-1">Tổng Lượt Xem (Pageviews)</span>
+              <span id="statPageviews" class="text-3xl font-black text-brand-darkGreen">1,248</span>
+              <span class="text-[11px] text-emerald-600 font-semibold block mt-1"><i class="fa-solid fa-arrow-trend-up"></i> +18.4% tuần này</span>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+              <span class="text-xs text-slate-500 font-bold uppercase block mb-1">Khách Truy Cập (Visitors)</span>
+              <span id="statVisitors" class="text-3xl font-black text-brand-green">892</span>
+              <span class="text-[11px] text-emerald-600 font-semibold block mt-1"><i class="fa-solid fa-user-check"></i> Đang theo dõi Realtime</span>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+              <span class="text-xs text-slate-500 font-bold uppercase block mb-1">Nguồn Tìm Kiếm (Google SEO)</span>
+              <span class="text-3xl font-black text-blue-600">68.2%</span>
+              <span class="text-[11px] text-slate-400 block mt-1">Từ bài viết cẩm nang</span>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+              <span class="text-xs text-slate-500 font-bold uppercase block mb-1">Tỷ Lệ Chốt Đơn (Conversion)</span>
+              <span id="statConversion" class="text-3xl font-black text-brand-gold">5.4%</span>
+              <span class="text-[11px] text-slate-400 block mt-1">Khách gửi form hoặc gọi điện</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+              <h4 class="font-bold text-sm text-slate-900 border-b pb-2">Nguồn Khách Hàng Truy Cập</h4>
+              <div class="space-y-3 text-xs">
+                <div>
+                  <div class="flex justify-between font-bold mb-1"><span>Google Search (SEO Tự Nhiên)</span><span>68%</span></div>
+                  <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-brand-green w-[68%]"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between font-bold mb-1"><span>Zalo & Mạng Xã Hội</span><span>20%</span></div>
+                  <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-blue-500 w-[20%]"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between font-bold mb-1"><span>Truy cập trực tiếp</span><span>12%</span></div>
+                  <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-amber-500 w-[12%]"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+              <h4 class="font-bold text-sm text-slate-900 border-b pb-2">Thiết Bị Người Dùng</h4>
+              <div class="grid grid-cols-2 gap-4 text-center">
+                <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-100">
+                  <i class="fa-solid fa-mobile-screen text-3xl text-brand-green mb-2 block"></i>
+                  <span class="text-xl font-black text-brand-darkGreen">82%</span>
+                  <span class="text-xs text-slate-500 block">Điện thoại di động</span>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                  <i class="fa-solid fa-laptop text-3xl text-slate-600 mb-2 block"></i>
+                  <span class="text-xl font-black text-slate-800">18%</span>
+                  <span class="text-xs text-slate-500 block">Máy tính để bàn</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= TAB 2: ĐƠN BÁO GIÁ (CRM) ================= -->
+        <div id="adminTab-leads" class="hidden space-y-4">
           <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-x-auto">
             <table class="w-full text-left text-sm">
               <thead class="bg-slate-50 text-slate-600 border-b text-xs uppercase font-bold">
@@ -798,20 +671,137 @@
           </div>
         </div>
 
+        <!-- ================= TAB 3: KẾ TOÁN & THU CHI ================= -->
+        <div id="adminTab-finance" class="hidden space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+              <span class="text-xs text-slate-500 font-bold uppercase block mb-1">Tổng Doanh Thu (Thu vào)</span>
+              <span id="financeTotalIncome" class="text-2xl font-black text-brand-green">0 đ</span>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+              <span class="text-xs text-slate-500 font-bold uppercase block mb-1">Tổng Chi Phí (Chi ra)</span>
+              <span id="financeTotalExpense" class="text-2xl font-black text-red-600">0 đ</span>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+              <span class="text-xs text-slate-500 font-bold uppercase block mb-1">Lợi Nhuận Ròng Thực Tế</span>
+              <span id="financeNetProfit" class="text-2xl font-black text-brand-darkGreen">0 đ</span>
+            </div>
+          </div>
+
+          <!-- Form Thêm Giao Dịch Thu / Chi -->
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+            <h4 class="font-bold text-sm text-slate-900 mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-plus-circle text-brand-green"></i> Thêm Phiếu Thu / Phiếu Chi Mới
+            </h4>
+            <form onsubmit="handleAddTransaction(event)" class="grid grid-cols-1 sm:grid-cols-5 gap-3 text-xs">
+              <div>
+                <label class="block font-bold mb-1">Loại phiếu</label>
+                <select id="transType" class="w-full p-2 rounded-lg border font-bold">
+                  <option value="income">🟢 Phiếu THU (Doanh thu)</option>
+                  <option value="expense">🔴 Phiếu CHI (Chi phí)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block font-bold mb-1">Số tiền (VNĐ)</label>
+                <input type="number" id="transAmount" required placeholder="Ví dụ: 1500000" class="w-full p-2 rounded-lg border">
+              </div>
+              <div>
+                <label class="block font-bold mb-1">Hạng mục</label>
+                <select id="transCategory" class="w-full p-2 rounded-lg border">
+                  <option>Tiền khách thanh toán</option>
+                  <option>Công thợ / Nhân công</option>
+                  <option>Mua hóa chất & vật tư</option>
+                  <option>Xăng xe & Vận chuyển</option>
+                  <option>Sửa chữa máy móc</option>
+                  <option>Khác</option>
+                </select>
+              </div>
+              <div>
+                <label class="block font-bold mb-1">Ghi chú / Khách hàng</label>
+                <input type="text" id="transNote" placeholder="Ví dụ: Căn hộ Cầu Giấy..." class="w-full p-2 rounded-lg border">
+              </div>
+              <div class="flex items-end">
+                <button type="submit" class="w-full py-2 bg-brand-green hover:bg-brand-darkGreen text-white font-bold rounded-lg shadow">Lưu Giao Dịch</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Bảng Kê Giao Dịch -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-x-auto">
+            <table class="w-full text-left text-sm">
+              <thead class="bg-slate-50 text-slate-600 border-b text-xs uppercase font-bold">
+                <tr>
+                  <th class="py-3 px-4">Ngày</th>
+                  <th class="py-3 px-4">Loại</th>
+                  <th class="py-3 px-4">Hạng mục</th>
+                  <th class="py-3 px-4">Ghi chú</th>
+                  <th class="py-3 px-4 text-right">Số tiền</th>
+                  <th class="py-3 px-4 text-center">Xóa</th>
+                </tr>
+              </thead>
+              <tbody id="financeTableBody" class="divide-y divide-slate-100 text-slate-700 text-xs"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ================= TAB 4: ĐĂNG BÀI VIẾT BLOG SEO ================= -->
+        <div id="adminTab-blog" class="hidden space-y-6">
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+            <h4 class="font-bold text-sm text-slate-900 mb-4 flex items-center gap-2">
+              <i class="fa-solid fa-pen-nib text-brand-green"></i> Đăng Bài Viết Cẩm Nang / Báo Chí SEO Mới
+            </h4>
+            <form onsubmit="handleCreateBlogPost(event)" class="space-y-4 text-xs">
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div class="sm:col-span-2">
+                  <label class="block font-bold mb-1">Tiêu đề bài viết (Chuẩn SEO)</label>
+                  <input type="text" id="blogTitle" required placeholder="Ví dụ: Cách tẩy vết xi măng trên sàn gạch sau xây dựng..." class="w-full p-2.5 rounded-lg border font-bold text-sm">
+                </div>
+                <div>
+                  <label class="block font-bold mb-1">Chuyên mục</label>
+                  <input type="text" id="blogCategory" value="Mẹo Vệ Sinh" class="w-full p-2.5 rounded-lg border">
+                </div>
+              </div>
+              <div>
+                <label class="block font-bold mb-1">Link ảnh bìa bài viết</label>
+                <input type="text" id="blogImg" required value="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80" class="w-full p-2 rounded-lg border">
+              </div>
+              <div>
+                <label class="block font-bold mb-1">Mô tả tóm tắt (Hiện ngoài trang chủ)</label>
+                <input type="text" id="blogSnippet" required placeholder="Tóm tắt nội dung 1-2 câu ngắn..." class="w-full p-2 rounded-lg border">
+              </div>
+              <div>
+                <label class="block font-bold mb-1">Nội dung bài viết chi tiết</label>
+                <textarea id="blogContent" required rows="6" placeholder="Nhập đầy đủ nội dung bài viết chia sẻ kinh nghiệm để kéo traffic Google..." class="w-full p-3 rounded-lg border text-sm"></textarea>
+              </div>
+              <button type="submit" class="px-6 py-2.5 bg-brand-green hover:bg-brand-darkGreen text-white font-bold rounded-xl shadow transition">
+                <i class="fa-solid fa-paper-plane mr-1"></i> XUẤT BẢN BÀI VIẾT RA TRANG CHỦ
+              </button>
+            </form>
+          </div>
+
+          <!-- Danh sách bài viết đã đăng -->
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+            <h4 class="font-bold text-sm text-slate-900 mb-3">Các Bài Viết Đang Hiển Thị Ngoài Trang Web</h4>
+            <div id="adminBlogList" class="space-y-3 text-xs"></div>
+          </div>
+        </div>
+
+        <!-- ================= TAB 5: SỬA GIÁ & ẢNH DỊCH VỤ ================= -->
         <div id="adminTab-services" class="hidden space-y-4">
           <div id="adminServicesGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
         </div>
 
+        <!-- ================= TAB 6: SỬA HOTLINE & CHI NHÁNH ================= -->
         <div id="adminTab-config" class="hidden space-y-4">
           <div class="bg-white p-6 rounded-2xl border border-slate-200 max-w-2xl space-y-4">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-xs font-bold text-slate-700 mb-1">Số Hotline</label>
-                <input type="text" id="adminCfgHotline" class="w-full px-3.5 py-2.5 rounded-lg border text-sm font-bold text-brand-orange">
+                <label class="block text-xs font-bold text-slate-700 mb-1">Số Hotline Dọn Nè</label>
+                <input type="text" id="adminCfgHotline" class="w-full px-3.5 py-2.5 rounded-lg border text-sm font-bold text-brand-green">
               </div>
               <div>
                 <label class="block text-xs font-bold text-slate-700 mb-1">Số Zalo</label>
-                <input type="text" id="adminCfgZalo" class="w-full px-3.5 py-2.5 rounded-lg border text-sm font-bold text-brand-zalo">
+                <input type="text" id="adminCfgZalo" class="w-full px-3.5 py-2.5 rounded-lg border text-sm font-bold text-blue-600">
               </div>
             </div>
             <div>
@@ -826,39 +816,81 @@
               <label class="block text-xs font-bold text-slate-700 mb-1">Chi nhánh 3 (Cầu Giấy)</label>
               <input type="text" id="adminCfgBranch3" class="w-full px-3.5 py-2 rounded-lg border text-xs">
             </div>
-            <button onclick="saveSiteConfig()" class="px-6 py-2.5 bg-brand-blue hover:bg-brand-darkBlue text-white font-bold rounded-xl text-xs shadow transition">
+            <button onclick="saveSiteConfig()" class="px-6 py-2.5 bg-brand-green hover:bg-brand-darkGreen text-white font-bold rounded-xl text-xs shadow transition">
               <i class="fa-solid fa-floppy-disk mr-1"></i> LƯU THÔNG TIN MỚI
             </button>
           </div>
         </div>
+
       </div>
     </div>
   </div>
 
-  <!-- ================= JAVASCRIPT ================= -->
+  <!-- ================= JAVASCRIPT LOGIC TOÀN BỘ HỆ THỐNG ================= -->
   <script>
+    // 1. DATA SERVICES
     const defaultServices = [
-      { id: 0, title: "Vệ sinh sau xây dựng", price: "8.000 – 18.000đ/m²", desc: "Dọn bụi mịn, xử lý sơn, xi măng, keo bám và rác công trình sau khi hoàn thiện.", img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80", equipment: "Máy chà sàn đơn, máy hút bụi 3 motor, sủi sàn chuyên dụng, hóa chất tẩy xi măng hữu cơ." },
-      { id: 1, title: "Vệ sinh văn phòng", price: "8.000 – 18.000đ/m²", desc: "Làm sạch bàn ghế, sàn, kính, pantry, toilet, phòng họp và toàn bộ khu làm việc.", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80", equipment: "Máy hút bụi êm, cây gạt kính Unger, khăn microfiber, dung dịch khử khuẩn." },
-      { id: 2, title: "Vệ sinh nhà xưởng", price: "6.000 – 15.000đ/m²", desc: "Làm sạch sàn xưởng, trần kho bãi, quét mạng nhện và bụi bẩn máy móc.", img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80", equipment: "Máy chà sàn liên hợp tự hành, giàn giáo an toàn, hóa chất tẩy dầu mỡ công nghiệp." },
-      { id: 3, title: "Vệ sinh nhà cửa", price: "500.000 – 2.500.000đ/gói", desc: "Tổng vệ sinh căn hộ chung cư, nhà phố, biệt thự trước khi dọn vào ở hoặc định kỳ.", img: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=600&q=80", equipment: "Máy hút bụi công suất lớn, máy làm sạch hơi nước nóng, hóa chất gia dụng an toàn." },
-      { id: 4, title: "Dịch vụ lau kính", price: "10.000 – 30.000đ/m²", desc: "Lau kính văn phòng, vách kính showroom, cửa kính nhà ở và đu dây lau kính ngoài trời.", img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80", equipment: "Bộ dây đu an toàn kiểm định, thang nâng, cần gạt nối dài, hóa chất tẩy vảy cá kính." },
+      { id: 0, title: "Vệ sinh sau xây dựng", price: "8.000 – 18.000đ/m²", desc: "Dọn sạch bụi mịn, cạo sạch sơn, xi măng, keo bám trên sàn gạch, len tường và cửa kính sau thi công hoàn thiện.", img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80", equipment: "Máy chà sàn đơn, máy hút bụi 3 motor, sủi sàn chuyên dụng, hóa chất tẩy xi măng hữu cơ." },
+      { id: 1, title: "Vệ sinh văn phòng", price: "8.000 – 18.000đ/m²", desc: "Làm sạch bàn ghế, sàn, kính, pantry, toilet, phòng họp và toàn bộ khu làm việc định kỳ hoặc trọn gói.", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80", equipment: "Máy hút bụi êm, cây gạt kính Unger, khăn microfiber, dung dịch khử khuẩn." },
+      { id: 2, title: "Vệ sinh nhà xưởng", price: "6.000 – 15.000đ/m²", desc: "Làm sạch sàn xưởng diện tích lớn, quét mạng nhện trần kho bãi, xử lý vết dầu mỡ máy móc công nghiệp.", img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80", equipment: "Máy chà sàn liên hợp tự hành, giàn giáo an toàn, hóa chất tẩy dầu mỡ công nghiệp." },
+      { id: 3, title: "Vệ sinh nhà cửa", price: "500.000 – 2.500.000đ/gói", desc: "Tổng vệ sinh căn hộ chung cư, nhà phố, biệt thự trước khi dọn vào ở hoặc dọn nhà đón Tết.", img: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=600&q=80", equipment: "Máy hút bụi công suất lớn, máy làm sạch hơi nước nóng, hóa chất gia dụng an toàn." },
+      { id: 4, title: "Dịch vụ lau kính", price: "10.000 – 30.000đ/m²", desc: "Lau kính văn phòng, vách kính showroom, cửa kính nhà ở và đu dây lau kính mặt ngoài tòa nhà.", img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80", equipment: "Bộ dây đu an toàn kiểm định, thang nâng, cần gạt nối dài, hóa chất tẩy vảy cá kính." },
       { id: 5, title: "Dịch vụ chà sàn", price: "8.000 – 20.000đ/m²", desc: "Chà sàn bằng máy công nghiệp, xử lý sàn bẩn, ố màu, đánh bóng và hút nước khô ráo.", img: "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=600&q=80", equipment: "Máy chà sàn tạ 70kg, pad chà 3M, máy hút nước công nghiệp." },
-      { id: 6, title: "Giặt thảm văn phòng", price: "8.000 – 18.000đ/m²", desc: "Giặt thảm trải sàn văn phòng, hành lang, phòng họp bằng công nghệ phun hút diệt khuẩn.", img: "https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=600&q=80", equipment: "Máy giặt thảm phun hút, quạt sấy hình sò 3 tốc độ, dung dịch giặt thảm tạo bọt ít." },
-      { id: 7, title: "Giặt ghế sofa & đệm", price: "100.000 – 150.000đ/chỗ", desc: "Làm sạch sofa vải, nỉ, da; giặt đệm cao su, bông ép tại nhà với máy móc khử mùi.", img: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80", equipment: "Máy phun hút áp lực cao, máy xông tinh dầu, xi dưỡng bóng da chuyên dụng." },
-      { id: 8, title: "Thau rửa bể nước ngầm", price: "800.000 – 2.500.000đ/bể", desc: "Làm sạch cặn bẩn, bùn lắng, diệt rong rêu khử khuẩn bể chứa nước sinh hoạt.", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80", equipment: "Máy bơm chìm hút bùn cặn, đèn chiếu chống nước, dung dịch khử khuẩn Cloramin B." }
+      { id: 6, title: "Giặt thảm văn phòng", price: "8.000 – 18.000đ/m²", desc: "Giặt thảm trải sàn văn phòng, hành lang, phòng họp bằng công nghệ phun hút diệt khuẩn thơm mát.", img: "https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=600&q=80", equipment: "Máy giặt thảm phun hút, quạt sấy hình sò 3 tốc độ, dung dịch giặt thảm tạo bọt ít." },
+      { id: 7, title: "Giặt ghế sofa & đệm", price: "100.000 – 150.000đ/chỗ", desc: "Làm sạch sofa vải, nỉ, da; giặt đệm cao su, bông ép tại nhà với máy móc khử mùi chuyên sâu.", img: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80", equipment: "Máy phun hút áp lực cao, máy xông tinh dầu, xi dưỡng bóng da chuyên dụng." },
+      { id: 8, title: "Thau rửa bể nước ngầm", price: "800.000 – 2.500.000đ/bể", desc: "Hút cặn bẩn, bùn lắng, diệt rong rêu khử khuẩn bể chứa nước sinh hoạt an toàn.", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80", equipment: "Máy bơm chìm hút bùn cặn, đèn chiếu chống nước, dung dịch khử khuẩn Cloramin B." }
+    ];
+
+    // 2. DATA BLOGS SEO
+    const defaultBlogs = [
+      {
+        id: 1,
+        title: "Bao lâu nên thau rửa bể nước ngầm sinh hoạt một lần?",
+        category: "Kinh nghiệm hay",
+        date: "Hôm nay",
+        img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
+        snippet: "Bể nước ngầm gia đình sau 6 tháng tích tụ rất nhiều bùn đất, cát mịn và rong rêu gây hại cho sức khỏe...",
+        content: "Bể nước ngầm là nơi chứa toàn bộ nguồn nước ăn uống và sinh hoạt của gia đình hoặc tòa nhà. Tuy nhiên sau một thời gian dài sử dụng (từ 6 tháng đến 1 năm), đáy bể sẽ đọng lại lớp bùn đen, vi khuẩn và cặn canxi từ đường ống nước thành phố.\n\nĐội ngũ Dọn Nè khuyến cáo các gia đình nên thau rửa định kỳ 6 tháng/lần bằng máy bơm chìm và dung dịch khử trùng Cloramin B an toàn y tế để bảo vệ làn da và hệ tiêu hóa của trẻ nhỏ."
+      },
+      {
+        id: 2,
+        title: "Mẹo làm sạch vết sơn và xi măng sau khi sửa nhà",
+        category: "Mẹo dọn nhà",
+        date: "Hôm qua",
+        img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80",
+        snippet: "Cách xử lý nhanh các vệt sơn bả, keo dán kính và xi măng bám chặt trên nền gạch men mà không làm xước sàn...",
+        content: "Sau khi thợ xây hoàn thiện, sàn nhà thường dính rất nhiều vết xi măng đóng cứng và vệt sơn nước. Nếu dùng dao cạo sắt nhọn cào mạnh sẽ làm xước lớp men gạch vĩnh viễn.\n\nGiải pháp của Dọn Nè: Sử dụng sủi kính lưỡi mềm kết hợp dung dịch tẩy xi măng hữu cơ tự nhiên. Thấm dung dịch trong 3 phút để làm mềm vết bẩn, sau đó chà nhẹ bằng pad đỏ 3M là sàn sẽ sáng bóng như mới."
+      },
+      {
+        id: 3,
+        title: "Quy trình giặt ghế sofa nỉ và da chuẩn diệt khuẩn tại nhà",
+        category: "Vệ sinh nội thất",
+        date: "2 ngày trước",
+        img: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80",
+        snippet: "Khám phá quy trình 6 bước giặt sofa phun hút hơi nước nóng 100°C diệt sạch ve rận và mùi hôi...",
+        content: "Ghế sofa là nơi tiếp xúc thường xuyên của cả gia đình nhưng cũng là nơi trú ngụ của mạt bụi và nấm mốc. Quy trình giặt sofa của Dọn Nè gồm 6 bước: Hút bụi sâu các khe kẽ -> Phun bọt sinh học diệt khuẩn -> Đánh tan vết ố bằng máy chà mini -> Phun hút nước dơ áp lực cao -> Xông tinh dầu thơm dịu -> Thoa kem dưỡng bóng da."
+      }
+    ];
+
+    // 3. DATA FINANCE
+    const defaultTransactions = [
+      { id: 1, date: "14/08/2026", type: "income", category: "Tiền khách thanh toán", amount: 2500000, note: "Vệ sinh căn hộ Imperia Smart City" },
+      { id: 2, date: "14/08/2026", type: "expense", category: "Công thợ / Nhân công", amount: 800000, note: "Trả lương thợ Nam + Hùng" },
+      { id: 3, date: "13/08/2026", type: "expense", category: "Mua hóa chất & vật tư", amount: 350000, note: "Mua nước lau kính và pad 3M" },
+      { id: 4, date: "13/08/2026", type: "income", category: "Tiền khách thanh toán", amount: 1800000, note: "Giặt thảm văn phòng Keangnam" }
     ];
 
     const faqList = [
-      { q: "Dịch vụ vệ sinh công nghiệp Hà Nội gồm những hạng mục nào?", a: "Dịch vụ vệ sinh công nghiệp tại Hà Nội thường gồm vệ sinh sau xây dựng, vệ sinh văn phòng, vệ sinh nhà xưởng, tổng vệ sinh nhà ở, lau kính, chà sàn, giặt thảm, giặt ghế sofa, giặt đệm và thau rửa bể nước ngầm." },
-      { q: "Dọn vệ sinh công nghiệp khác gì so với dọn vệ sinh thông thường?", a: "Vệ sinh công nghiệp xử lý khối lượng lớn, vết bẩn cứng đầu bằng máy móc chuyên dụng (máy chà sàn, máy hút bụi công suất lớn) và hóa chất chuyên biệt." },
-      { q: "CleanHanoi có đội dọn vệ sinh công nghiệp ở Hà Nội thi công trực tiếp không?", a: "Có. CleanHanoi bố trí đội ngũ nhân viên vệ sinh công nghiệp tại Hà Nội thi công trực tiếp theo từng hạng mục chuyên biệt." },
-      { q: "Có thể dọn vệ sinh công nghiệp ở Hà Nội ngoài giờ hành chính không?", a: "Có thể. CleanHanoi có thể sắp xếp thi công vệ sinh công nghiệp tại Hà Nội 24/7, ngoài giờ, buổi tối hoặc cuối tuần." },
-      { q: "Sau khi vệ sinh chưa đạt yêu cầu thì có được xử lý lại không?", a: "Có! Các hạng mục chưa đạt trong phạm vi đã thống nhất sẽ được CleanHanoi kiểm tra và xử lý lại ngay lập tức trước khi nghiệm thu thanh toán." }
+      { q: "Dịch vụ Dọn Nè gồm những hạng mục nào?", a: "Dọn Nè cung cấp đầy đủ các dịch vụ: Vệ sinh sau xây dựng, vệ sinh văn phòng, vệ sinh nhà xưởng, tổng vệ sinh căn hộ/nhà phố, giặt ghế sofa, đệm, thảm và thau rửa bể nước ngầm." },
+      { q: "Dọn Nè có nhận làm ngoài giờ hành chính hoặc ban đêm không?", a: "Có! Dọn Nè phục vụ 24/7, sẵn sàng thi công ca đêm hoặc cuối tuần cho văn phòng, cửa hàng, showroom để không ảnh hưởng kinh doanh." },
+      { q: "Sau khi vệ sinh chưa đạt yêu cầu có được làm lại không?", a: "Có! Dọn Nè cam kết khách hàng kiểm tra nghiệm thu hài lòng 100% mới tiến hành thanh toán." }
     ];
 
-    let services = JSON.parse(localStorage.getItem('cleanHanoi_services')) || defaultServices;
-    let config = JSON.parse(localStorage.getItem('cleanHanoi_config')) || {
+    // State Variables
+    let services = JSON.parse(localStorage.getItem('donNe_services')) || defaultServices;
+    let blogs = JSON.parse(localStorage.getItem('donNe_blogs')) || defaultBlogs;
+    let transactions = JSON.parse(localStorage.getItem('donNe_transactions')) || defaultTransactions;
+    let config = JSON.parse(localStorage.getItem('donNe_config')) || {
       hotline: '0355 616 583',
       zalo: '0355 616 583',
       branch1: '31/12 Phúc Lợi, Long Biên, Hà Nội',
@@ -866,8 +898,18 @@
       branch3: 'Nhà C2, Làng Quốc Tế Thăng Long, Cầu Giấy, Hà Nội'
     };
 
+    // Auto Track Traffic
+    function trackVisit() {
+      let pageviews = parseInt(localStorage.getItem('donNe_pageviews') || '1248') + 1;
+      let visitors = parseInt(localStorage.getItem('donNe_visitors') || '892') + (Math.random() > 0.6 ? 1 : 0);
+      localStorage.setItem('donNe_pageviews', pageviews);
+      localStorage.setItem('donNe_visitors', visitors);
+    }
+    trackVisit();
+
+    // RENDER CLIENT UI
     function renderClientView() {
-      // 1. Services Grid
+      // 1. Services
       const grid = document.getElementById('servicesClientGrid');
       grid.innerHTML = '';
       services.forEach((s, idx) => {
@@ -878,11 +920,11 @@
             </div>
             <div class="p-5 flex flex-col flex-1 justify-between">
               <div>
-                <h3 class="text-lg font-bold text-slate-900 mb-1 group-hover:text-brand-blue transition">${s.title}</h3>
-                <p class="text-brand-orange font-bold text-xs mb-2">${s.price}</p>
+                <h3 class="text-lg font-bold text-slate-900 mb-1 group-hover:text-brand-green transition">${s.title}</h3>
+                <p class="text-brand-gold font-bold text-xs mb-2">${s.price}</p>
                 <p class="text-slate-600 text-xs leading-relaxed mb-4">${s.desc}</p>
               </div>
-              <button onclick="openServiceModal(${idx})" class="text-brand-blue font-bold text-sm inline-flex items-center gap-1 hover:text-brand-orange transition border-t pt-3 w-full text-left">
+              <button onclick="openServiceModal(${idx})" class="text-brand-green font-bold text-sm inline-flex items-center gap-1 hover:text-brand-darkGreen transition border-t pt-3 w-full text-left">
                 Xem chi tiết →
               </button>
             </div>
@@ -895,44 +937,67 @@
       pBody.innerHTML = '';
       services.forEach(s => {
         pBody.innerHTML += `
-          <tr class="hover:bg-sky-50/50 transition">
+          <tr class="hover:bg-emerald-50/50 transition">
             <td class="py-4 px-5 font-bold text-slate-900">${s.title}</td>
             <td class="py-4 px-5 hidden md:table-cell text-xs">${s.desc}</td>
-            <td class="py-4 px-5 font-extrabold text-brand-blue text-sm sm:text-base">${s.price}</td>
+            <td class="py-4 px-5 font-extrabold text-brand-green text-sm sm:text-base">${s.price}</td>
             <td class="py-4 px-5 text-xs text-slate-500">Khảo sát báo giá chuẩn</td>
           </tr>
         `;
       });
 
-      // 3. FAQ
+      // 3. Blog Posts (Cẩm nang SEO ngoài trang chủ)
+      const bGrid = document.getElementById('blogClientGrid');
+      bGrid.innerHTML = '';
+      blogs.forEach((b, idx) => {
+        bGrid.innerHTML += `
+          <div onclick="openBlogModal(${idx})" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-100 group cursor-pointer flex flex-col justify-between transition">
+            <div>
+              <div class="h-48 overflow-hidden relative">
+                <img src="${b.img}" alt="${b.title}" class="w-full h-full object-cover card-img-zoom">
+                <span class="absolute top-3 left-3 bg-brand-green text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">${b.category}</span>
+              </div>
+              <div class="p-5">
+                <span class="text-[11px] text-slate-400 font-semibold block mb-1.5"><i class="fa-solid fa-calendar mr-1"></i> ${b.date}</span>
+                <h3 class="font-bold text-slate-900 text-base leading-snug group-hover:text-brand-green transition mb-2">${b.title}</h3>
+                <p class="text-slate-600 text-xs line-clamp-2 leading-relaxed">${b.snippet}</p>
+              </div>
+            </div>
+            <div class="px-5 pb-5 pt-2">
+              <span class="text-brand-green font-bold text-xs flex items-center gap-1 group-hover:translate-x-1 transition">Đọc tiếp bài viết <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+            </div>
+          </div>
+        `;
+      });
+
+      // 4. FAQ
       const faqContainer = document.getElementById('faqAccordion');
       faqContainer.innerHTML = '';
       faqList.forEach((f, idx) => {
         faqContainer.innerHTML += `
-          <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
-            <button onclick="toggleFaq(${idx})" class="w-full px-5 py-4 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-50 transition text-sm sm:text-base">
+          <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+            <button onclick="toggleFaq(${idx})" class="w-full px-5 py-4 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-100 transition text-sm sm:text-base">
               <span>${f.q}</span>
               <i id="faq-icon-${idx}" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
             </button>
-            <div id="faq-content-${idx}" class="px-5 pb-4 text-slate-600 text-sm hidden leading-relaxed border-t border-slate-100 pt-3">
+            <div id="faq-content-${idx}" class="px-5 pb-4 text-slate-600 text-sm hidden leading-relaxed border-t border-slate-200 pt-3">
               ${f.a}
             </div>
           </div>
         `;
       });
 
-      // 4. Footer Services
+      // 5. Footer Services
       const footerList = document.getElementById('footerServicesList');
       footerList.innerHTML = '';
       services.slice(0, 6).forEach((s, idx) => {
         footerList.innerHTML += `<li><button onclick="openServiceModal(${idx})" class="hover:text-white transition text-left">${s.title}</button></li>`;
       });
 
-      // 5. Config
+      // 6. Apply Config
       document.querySelectorAll('.dynamic-hotline-text').forEach(el => el.textContent = config.hotline);
-      document.querySelectorAll('.dynamic-hotline-link').forEach(el => el.href = `tel:${config.hotline.replace(/\\s+/g, '')}`);
-      document.querySelectorAll('.dynamic-zalo-link').forEach(el => el.href = `https://zalo.me/${config.zalo.replace(/\\s+/g, '')}`);
-      
+      document.querySelectorAll('.dynamic-hotline-link').forEach(el => el.href = `tel:${config.hotline.replace(/\s+/g, '')}`);
+      document.querySelectorAll('.dynamic-zalo-link').forEach(el => el.href = `https://zalo.me/${config.zalo.replace(/\s+/g, '')}`);
       document.getElementById('branchDisplay1').textContent = config.branch1;
       document.getElementById('branchDisplay2').textContent = config.branch2;
       document.getElementById('branchDisplay3').textContent = config.branch3;
@@ -946,6 +1011,7 @@
       icon.classList.toggle('rotate-180', isHidden);
     }
 
+    // Modal Dịch vụ
     function openServiceModal(index) {
       const data = services[index];
       document.getElementById('modalTitle').textContent = data.title;
@@ -956,12 +1022,28 @@
       document.getElementById('serviceModal').classList.remove('hidden');
       document.body.style.overflow = 'hidden';
     }
-
     function closeServiceModal() {
       document.getElementById('serviceModal').classList.add('hidden');
       document.body.style.overflow = 'auto';
     }
 
+    // Modal Đọc Bài Viết
+    function openBlogModal(index) {
+      const b = blogs[index];
+      document.getElementById('blogModalTitle').textContent = b.title;
+      document.getElementById('blogModalImg').src = b.img;
+      document.getElementById('blogModalCategory').textContent = b.category;
+      document.getElementById('blogModalDate').textContent = "Ngày đăng: " + b.date;
+      document.getElementById('blogModalContent').innerHTML = b.content.split('\n\n').map(p => `<p>${p}</p>`).join('');
+      document.getElementById('blogModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeBlogModal() {
+      document.getElementById('blogModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Client Submit Lead
     document.getElementById('clientLeadForm').addEventListener('submit', (e) => {
       e.preventDefault();
       const newLead = {
@@ -974,15 +1056,15 @@
         status: 'Mới'
       };
 
-      let leads = JSON.parse(localStorage.getItem('cleanHanoi_leads')) || [];
+      let leads = JSON.parse(localStorage.getItem('donNe_leads')) || [];
       leads.unshift(newLead);
-      localStorage.setItem('cleanHanoi_leads', JSON.stringify(leads));
+      localStorage.setItem('donNe_leads', JSON.stringify(leads));
 
-      alert('Gửi yêu cầu thành công! Đội ngũ CleanHanoi sẽ liên hệ lại ngay lập tức.');
+      alert('Gửi yêu cầu thành công! Đội ngũ Dọn Nè sẽ liên hệ lại ngay trong 5-10 phút.');
       document.getElementById('clientLeadForm').reset();
     });
 
-    // Admin Functions
+    // ADMIN CONTROL PANEL LOGIC
     function openAdminLogin() {
       document.getElementById('adminModal').classList.remove('hidden');
       document.getElementById('adminLoginScreen').classList.remove('hidden');
@@ -1002,16 +1084,23 @@
         alert('Mật khẩu sai! Vui lòng nhập: admin123');
       }
     }
+
     function switchAdminTab(tab) {
-      ['leads', 'services', 'config'].forEach(t => {
+      ['traffic', 'leads', 'finance', 'blog', 'services', 'config'].forEach(t => {
         document.getElementById(`adminTab-${t}`).classList.add('hidden');
         document.getElementById(`adminTabBtn-${t}`).className = 'py-3 px-4 border-b-2 border-transparent text-slate-500 hover:text-slate-900 flex items-center gap-2';
       });
       document.getElementById(`adminTab-${tab}`).classList.remove('hidden');
-      document.getElementById(`adminTabBtn-${tab}`).className = 'py-3 px-4 border-b-2 border-brand-blue text-brand-blue flex items-center gap-2';
+      document.getElementById(`adminTabBtn-${tab}`).className = 'py-3 px-4 border-b-2 border-brand-green text-brand-green flex items-center gap-2';
     }
+
     function renderAdminData() {
-      const leads = JSON.parse(localStorage.getItem('cleanHanoi_leads')) || [];
+      // 1. Traffic Stats
+      document.getElementById('statPageviews').textContent = (parseInt(localStorage.getItem('donNe_pageviews') || '1248')).toLocaleString('vi-VN');
+      document.getElementById('statVisitors').textContent = (parseInt(localStorage.getItem('donNe_visitors') || '892')).toLocaleString('vi-VN');
+
+      // 2. Leads CRM
+      const leads = JSON.parse(localStorage.getItem('donNe_leads')) || [];
       document.getElementById('adminLeadCount').textContent = leads.length;
       const tBody = document.getElementById('adminLeadsTable');
       tBody.innerHTML = '';
@@ -1023,7 +1112,7 @@
             <tr class="hover:bg-slate-50 border-b text-xs">
               <td class="py-3 px-4 text-slate-400">${l.date}</td>
               <td class="py-3 px-4 font-bold text-slate-900">${l.name}</td>
-              <td class="py-3 px-4 font-bold text-brand-blue">${l.phone}</td>
+              <td class="py-3 px-4 font-bold text-brand-green">${l.phone}</td>
               <td class="py-3 px-4">${l.service}</td>
               <td class="py-3 px-4">${l.address}</td>
               <td class="py-3 px-4"><span class="px-2 py-0.5 rounded-full font-bold ${l.status === 'Mới' ? 'bg-amber-100 text-amber-700' : 'bg-emerald-100 text-emerald-700'}">${l.status}</span></td>
@@ -1037,6 +1126,28 @@
         });
       }
 
+      // 3. Finance & Accounting
+      renderFinanceData();
+
+      // 4. Blog CMS List
+      const blogList = document.getElementById('adminBlogList');
+      blogList.innerHTML = '';
+      blogs.forEach((b, idx) => {
+        blogList.innerHTML += `
+          <div class="flex justify-between items-center p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <div class="flex items-center gap-3">
+              <img src="${b.img}" class="w-12 h-12 rounded-lg object-cover">
+              <div>
+                <h5 class="font-bold text-slate-900">${b.title}</h5>
+                <span class="text-[10px] text-slate-400">${b.category} • ${b.date}</span>
+              </div>
+            </div>
+            <button onclick="deleteBlogPost(${idx})" class="px-3 py-1 bg-red-50 text-red-600 hover:bg-red-100 font-bold rounded-lg"><i class="fa-solid fa-trash mr-1"></i> Xóa bài</button>
+          </div>
+        `;
+      });
+
+      // 5. Services Editor
       const sGrid = document.getElementById('adminServicesGrid');
       sGrid.innerHTML = '';
       services.forEach((s, idx) => {
@@ -1051,17 +1162,18 @@
             </div>
             <div>
               <label class="font-bold text-slate-400">Giá niêm yết</label>
-              <input type="text" value="${s.price}" onchange="services[${idx}].price = this.value" class="w-full font-bold text-brand-orange border-b py-0.5 outline-none">
+              <input type="text" value="${s.price}" onchange="services[${idx}].price = this.value" class="w-full font-bold text-brand-gold border-b py-0.5 outline-none">
             </div>
             <div>
               <label class="font-bold text-slate-400">Link ảnh</label>
               <input type="text" value="${s.img}" onchange="services[${idx}].img = this.value" class="w-full text-slate-500 border-b py-0.5 outline-none">
             </div>
-            <button onclick="saveServices()" class="w-full py-1.5 bg-sky-50 text-brand-blue font-bold rounded-lg hover:bg-brand-blue hover:text-white transition">Lưu mục này</button>
+            <button onclick="saveServices()" class="w-full py-1.5 bg-emerald-50 text-brand-darkGreen font-bold rounded-lg hover:bg-brand-green hover:text-white transition">Lưu dịch vụ này</button>
           </div>
         `;
       });
 
+      // 6. Config Inputs
       document.getElementById('adminCfgHotline').value = config.hotline;
       document.getElementById('adminCfgZalo').value = config.zalo;
       document.getElementById('adminCfgBranch1').value = config.branch1;
@@ -1069,17 +1181,99 @@
       document.getElementById('adminCfgBranch3').value = config.branch3;
     }
 
+    // Finance Functions
+    function renderFinanceData() {
+      let income = 0;
+      let expense = 0;
+      const fBody = document.getElementById('financeTableBody');
+      fBody.innerHTML = '';
+
+      transactions.forEach((t, idx) => {
+        if (t.type === 'income') income += t.amount;
+        else expense += t.amount;
+
+        fBody.innerHTML += `
+          <tr class="hover:bg-slate-50">
+            <td class="py-2.5 px-4 text-slate-400">${t.date}</td>
+            <td class="py-2.5 px-4 font-bold ${t.type === 'income' ? 'text-brand-green' : 'text-red-600'}">${t.type === 'income' ? '+ THU' : '- CHI'}</td>
+            <td class="py-2.5 px-4">${t.category}</td>
+            <td class="py-2.5 px-4">${t.note || '-'}</td>
+            <td class="py-2.5 px-4 text-right font-black ${t.type === 'income' ? 'text-brand-darkGreen' : 'text-red-600'}">${t.amount.toLocaleString('vi-VN')} đ</td>
+            <td class="py-2.5 px-4 text-center"><button onclick="deleteTransaction(${idx})" class="text-slate-400 hover:text-red-600"><i class="fa-solid fa-trash"></i></button></td>
+          </tr>
+        `;
+      });
+
+      document.getElementById('financeTotalIncome').textContent = income.toLocaleString('vi-VN') + ' đ';
+      document.getElementById('financeTotalExpense').textContent = expense.toLocaleString('vi-VN') + ' đ';
+      document.getElementById('financeNetProfit').textContent = (income - expense).toLocaleString('vi-VN') + ' đ';
+    }
+
+    function handleAddTransaction(e) {
+      e.preventDefault();
+      const newTrans = {
+        id: Date.now(),
+        date: new Date().toLocaleDateString('vi-VN'),
+        type: document.getElementById('transType').value,
+        amount: parseInt(document.getElementById('transAmount').value),
+        category: document.getElementById('transCategory').value,
+        note: document.getElementById('transNote').value
+      };
+      transactions.unshift(newTrans);
+      localStorage.setItem('donNe_transactions', JSON.stringify(transactions));
+      renderFinanceData();
+      e.target.reset();
+      alert('Đã lưu giao dịch vào sổ kế toán!');
+    }
+
+    function deleteTransaction(idx) {
+      if (confirm('Xóa phiếu giao dịch này?')) {
+        transactions.splice(idx, 1);
+        localStorage.setItem('donNe_transactions', JSON.stringify(transactions));
+        renderFinanceData();
+      }
+    }
+
+    // Blog CMS Functions
+    function handleCreateBlogPost(e) {
+      e.preventDefault();
+      const newBlog = {
+        id: Date.now(),
+        title: document.getElementById('blogTitle').value,
+        category: document.getElementById('blogCategory').value || 'Mẹo Vệ Sinh',
+        date: new Date().toLocaleDateString('vi-VN'),
+        img: document.getElementById('blogImg').value,
+        snippet: document.getElementById('blogSnippet').value,
+        content: document.getElementById('blogContent').value
+      };
+      blogs.unshift(newBlog);
+      localStorage.setItem('donNe_blogs', JSON.stringify(blogs));
+      renderClientView();
+      renderAdminData();
+      e.target.reset();
+      alert('🎉 Đã xuất bản bài viết thành công ra trang chủ Dọn Nè!');
+    }
+
+    function deleteBlogPost(idx) {
+      if (confirm('Xóa bài viết này khỏi trang web?')) {
+        blogs.splice(idx, 1);
+        localStorage.setItem('donNe_blogs', JSON.stringify(blogs));
+        renderClientView();
+        renderAdminData();
+      }
+    }
+
     function deleteLead(idx) {
       if (confirm('Xóa đơn này?')) {
-        let leads = JSON.parse(localStorage.getItem('cleanHanoi_leads')) || [];
+        let leads = JSON.parse(localStorage.getItem('donNe_leads')) || [];
         leads.splice(idx, 1);
-        localStorage.setItem('cleanHanoi_leads', JSON.stringify(leads));
+        localStorage.setItem('donNe_leads', JSON.stringify(leads));
         renderAdminData();
       }
     }
 
     function saveServices() {
-      localStorage.setItem('cleanHanoi_services', JSON.stringify(services));
+      localStorage.setItem('donNe_services', JSON.stringify(services));
       renderClientView();
       alert('Đã cập nhật dịch vụ ra trang chủ!');
     }
@@ -1090,11 +1284,12 @@
       config.branch1 = document.getElementById('adminCfgBranch1').value;
       config.branch2 = document.getElementById('adminCfgBranch2').value;
       config.branch3 = document.getElementById('adminCfgBranch3').value;
-      localStorage.setItem('cleanHanoi_config', JSON.stringify(config));
+      localStorage.setItem('donNe_config', JSON.stringify(config));
       renderClientView();
       alert('Đã lưu thông tin Hotline & Chi nhánh mới!');
     }
 
+    // Init
     window.onload = renderClientView;
     document.getElementById('mobileMenuBtn').onclick = () => document.getElementById('mobileMenu').classList.toggle('hidden');
   </script>
